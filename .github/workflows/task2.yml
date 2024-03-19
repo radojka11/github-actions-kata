@@ -1,8 +1,17 @@
 name: example-workflow
-on: [push]
+on: 
+  push:
+    paths:
+      - 'desktop-app/**.ts'
 jobs:
   example-job:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4  #clone the repo and the latest branchl
-      - run: echo "Hello, World!"
+      - uses: actions/setup-node@v4 
+        with: 
+        node-version: "latest"
+      - run: |
+        cd desktop-app
+        npm ci
+        npm test
