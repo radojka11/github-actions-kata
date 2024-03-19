@@ -4,5 +4,5 @@ jobs:
   example-job:
     runs-on: ubuntu-latest
     steps:
-      -uses: actions/checkout@v4  #clone the repo and the latest branchl
+      - uses: actions/checkout@v4  #clone the repo and the latest branchl
       - run: echo "Hello, World!"
