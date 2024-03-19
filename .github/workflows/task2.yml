@@ -10,7 +10,7 @@ jobs:
       - uses: actions/checkout@v4  #clone the repo and the latest branchl
       - uses: actions/setup-node@v4 
         with: 
-        node-version: "latest"
+          node-version: "latest"
       - run: |
           cd desktop-app
           npm ci
